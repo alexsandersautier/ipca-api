@@ -8,6 +8,6 @@ export default class IPCA {
     }
     
     findById(id) {
-        return historicalInflation.find(ipca => ipca.id === id);
+        return historicalInflation.find(ipca => ipca.id === parseInt(id));
     }
 }
