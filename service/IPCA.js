@@ -40,11 +40,12 @@ class IPCA {
             if ((Object.keys(param).includes("value")) && ((isNaN(param.value)) || (Number(param.value) < 0))){
                 return false;
             }
-            if ((Object.keys(param).includes("Year")) && (Number(param.value) < 2015 || Number(param.value) > 2023)) {
+
+            if ((Object.keys(param)[0].toLocaleLowerCase().includes("year")) && (Number(Object.values(param)[0]) < 2015 || Number(Object.values(param)[0]) > 2023)) {
                 return false;
             }
             
-            if ((Object.keys(param).includes("Month")) && (Number(param.value) < 1 || Number(param.value) > 12)) {
+            if ((Object.keys(param)[0].toLocaleLowerCase().includes("month")) && (Number(Object.values(param)[0]) < 1 || Number(Object.values(param)[0]) > 12)) {
                 return false;
             }
         }
