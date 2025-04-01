@@ -1,7 +1,7 @@
 const endpoints = {
     findAll: "/historicalIPCA",
     findById: "/historicalIPCA/:id",
-    calculate: "/historicoIPCA/calculo",
+    calculate: "/historicoIPCA/calculate",
 };
 
 export const message = {
