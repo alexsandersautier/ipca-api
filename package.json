@@ -1,5 +1,6 @@
 {
   "name": "ipca-api",
+  "type": "module",
   "version": "1.0.0",
   "description": "- Retrieve historical IPCA data from Jan-2015 to May-2023;  \r - Retrieve a specific historical record based on the provided identification code (ID);  \r - Retrieve historical data for a specific year;  \r   *e.g., all data from the year 2021;*  \r - Calculate an adjusted value based on the IPCA for the specified period;  \r   *e.g., adjusted value for the period from May-2022 to Feb-2023.*",
   "main": "index.js",
