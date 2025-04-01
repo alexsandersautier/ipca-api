@@ -8,4 +8,9 @@ app.get(endpoints.findAll, (req, res) =>{
     res.json(historicalInflation);
 });
 
+app.get(endpoints.findById, (req, res) => {
+    const id = req.params.id;
+    
+});
+
 app.listen(8080, () => console.log('Server started'));
