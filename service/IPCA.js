@@ -1,6 +1,6 @@
 import historicalInflation from '../data/data.js';
 
-export default class IPCA {
+class IPCA {
     constructor(){}
     
     findAll() {
@@ -11,3 +11,6 @@ export default class IPCA {
         return historicalInflation.find(ipca => ipca.id === parseInt(id));
     }
 }
+
+const IPCAService = new IPCA();
+export default IPCAService;
