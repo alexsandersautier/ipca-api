@@ -4,8 +4,12 @@ import endpoints from './constants.js';
 import IPCAService from './service/IPCA.js';
 
 app.get(endpoints.findAll, (req, res) =>{
-    const historicalInflation = IPCAService.findAll();
-    res.json(historicalInflation);
+    const year = req.query.year;
+    let historicalInflation = IPCAService.findAll();
+    if (year) {
+        historicalInflation = historicalInflation.filter((ipca) => ipca.year === parseInt(year));
+    }
+    historicalInflation.length > 0 ? res.json(historicalInflation) : res.status(404).json({message: "Params invalid"}); 
 });
 
 app.get(endpoints.findById, (req, res) => {
