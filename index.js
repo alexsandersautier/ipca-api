@@ -9,7 +9,7 @@ app.get(endpoints.findAll, (req, res) =>{
     if (year) {
         historicalInflation = historicalInflation.filter((ipca) => ipca.year === parseInt(year));
     }
-    historicalInflation.length > 0 ? res.json(historicalInflation) : res.status(404).json({message: "Params invalid"}); 
+    historicalInflation.length > 0 ? res.json(historicalInflation) : res.status(404).json({message: `${year} not found`}); 
 });
 
 app.get(endpoints.findById, (req, res) => {
